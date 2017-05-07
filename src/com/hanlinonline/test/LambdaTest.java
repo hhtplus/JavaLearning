@@ -9,10 +9,10 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 /**
- * Ñ§Ï°Ê¹ÓÃlambda±í´ïÊ½ Java8lambda±íÊ¾Ê½Ê¹ÓÃ°´ÕÕ¸öÈËÀí½â´ÓÒ×µ½ÄÑ½øĞĞÅÅĞòÖ÷ÒªÉæ¼°µ½ÒÔÏÂ¼¸¸ö·½Ãæ£º
- * 1£©¼¯ºÏµÄµü´ú
- * 2£©streamµÄÊ¹ÓÃ
- * 3£©FunctionInterface
+ * å­¦ä¹ ä½¿ç”¨lambdaè¡¨è¾¾å¼ Java8lambdaè¡¨ç¤ºå¼ä½¿ç”¨æŒ‰ç…§ä¸ªäººç†è§£ä»æ˜“åˆ°éš¾è¿›è¡Œæ’åºä¸»è¦æ¶‰åŠåˆ°ä»¥ä¸‹å‡ ä¸ªæ–¹é¢ï¼š
+ * 1ï¼‰é›†åˆçš„è¿­ä»£
+ * 2ï¼‰streamçš„ä½¿ç”¨
+ * 3ï¼‰FunctionInterface
  * 
  * @author lazier
  */
@@ -25,7 +25,7 @@ public class LambdaTest {
 	}
 
 	/**
-	 * ¼¯ºÏĞÂµÄµü´úĞ´·¨,forEach½ÓÊÜÒ»¸öConsumer½øĞĞÄÚÈİµÄÏû·Ñ
+	 * é›†åˆæ–°çš„è¿­ä»£å†™æ³•,forEachæ¥å—ä¸€ä¸ªConsumerè¿›è¡Œå†…å®¹çš„æ¶ˆè´¹
 	 */
 	private static void testLambdaForeach() {
 		List<String> testList = new ArrayList<>();
@@ -33,7 +33,7 @@ public class LambdaTest {
 		testList.add("two");
 		testList.add("three");
 
-		// ´«Í³Ğ´·¨
+		// ä¼ ç»Ÿå†™æ³•
 		for (int i = 0; i < testList.size(); i++) {
 			System.out.println(testList.get(i));
 		}
@@ -41,40 +41,40 @@ public class LambdaTest {
 		for (String str : testList) {
 			System.out.println(str);
 		}
-		// º¯ÊıÊ½Ğ´·¨
+		// å‡½æ•°å¼å†™æ³•
 		testList.forEach((str)->{System.out.println(str);});
 		
 		testList.forEach((str) -> System.out.println(str));
 		
-		//·Ö¿ªĞ´
+		//åˆ†å¼€å†™
 		Consumer<String> consumer = System.out::println;
 		testList.forEach(consumer);
 	}
 
 	/**
-	 * streamµÄÊ¹ÓÃ
-	 * Ö÷ÒªÉæ¼°µ½java.util.steam°ü
-	 * streamÖªÊ¶¿ÉÒÔ²Î¿¼https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
+	 * streamçš„ä½¿ç”¨
+	 * ä¸»è¦æ¶‰åŠåˆ°java.util.steamåŒ…
+	 * streamçŸ¥è¯†å¯ä»¥å‚è€ƒhttps://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
 	 */
 	private static void testStream() {
 		Stream.of("one","two","three").filter(str->str.startsWith("t")).map(String::toUpperCase).forEach(System.out::println);
 	}
 	
 	/**
-	 * ²âÊÔº¯ÊıÊ½½Ó¿Ú£¬Ö÷ÒªÉæ¼°µ½java.util.function°ü
+	 * æµ‹è¯•å‡½æ•°å¼æ¥å£ï¼Œä¸»è¦æ¶‰åŠåˆ°java.util.functionåŒ…
 	 * 
-	 * ÏêÇé²Î¿¼Á´½Ó£ºhttp://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/
+	 * è¯¦æƒ…å‚è€ƒé“¾æ¥ï¼šhttp://colobu.com/2014/10/28/secrets-of-java-8-functional-interface/
 	 */
 	private static void testFunctionalInterface(){
-		//´«Í³Ğ´·¨
+		//ä¼ ç»Ÿå†™æ³•
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				System.out.println("´«Í³Ïß³ÌÄäÃûÀàÊµÏÖ");
+				System.out.println("ä¼ ç»Ÿçº¿ç¨‹åŒ¿åç±»å®ç°");
 			}
 		}).start();
-		// º¯ÊıÊ½Ğ´·¨
-		new Thread(()->System.out.println("º¯ÊıÊ½ÊµÏÖ")).start();
+		// å‡½æ•°å¼å†™æ³•
+		new Thread(()->System.out.println("å‡½æ•°å¼å®ç°")).start();
 		MyFunctionInteface myFunctionInteface = ()->System.out.println("my function Interface");
 		myFunctionInteface.foo();
 	}

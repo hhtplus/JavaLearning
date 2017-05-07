@@ -4,12 +4,12 @@
 package com.hanlinonline.test;
 
 /**
- * ²âÊÔJAVA¶Ô¶àÏß³ÌµÄÊ¹ÓÃ£¬°´ÕÕJava°æ±¾Öğ²½ÒÀÀµµÄË³Ğò£¬²âÊÔ²½ÖèÈçÏÂ£º
- * 1£©1.0-1.4 ÖĞµÄ java.lang.Thread
- * 2£©5.0 ÖĞµÄ java.util.concurrent
- * 3£©6.0 ÖĞµÄ Phasers µÈ
- * 4£©7.0 ÖĞµÄ Fork/Join ¿ò¼Ü
- * 5£©8.0 ÖĞµÄ Lambda
+ * æµ‹è¯•JAVAå¯¹å¤šçº¿ç¨‹çš„ä½¿ç”¨ï¼ŒæŒ‰ç…§Javaç‰ˆæœ¬é€æ­¥ä¾èµ–çš„é¡ºåºï¼Œæµ‹è¯•æ­¥éª¤å¦‚ä¸‹ï¼š
+ * 1ï¼‰1.0-1.4 ä¸­çš„ java.lang.Thread
+ * 2ï¼‰5.0 ä¸­çš„ java.util.concurrent
+ * 3ï¼‰6.0 ä¸­çš„ Phasers ç­‰
+ * 4ï¼‰7.0 ä¸­çš„ Fork/Join æ¡†æ¶
+ * 5ï¼‰8.0 ä¸­çš„ Lambda
  * 
  * @author lazier
  */
@@ -17,7 +17,7 @@ public class MultiThreadTest {
 	
 	public static void main(String[] args) {
 		
-		//TODO:ÊµÏÖÏà¹Ø·½·¨
+		//TODO:å®ç°ç›¸å…³æ–¹æ³•
 		testThead();
 		testExecutor();
 		testPhasers();
@@ -25,28 +25,28 @@ public class MultiThreadTest {
 	}
 
 	/**
-	 * 1.0->1.4²âÊÔÏß³ÌÊµÏÖ 
+	 * 1.0->1.4æµ‹è¯•çº¿ç¨‹å®ç° 
 	 */
 	private static void testThead(){
 		
 	}
 	
 	/**
-	 * java1.5 ²âÊÔconcurrent executorsµÈÊµÏÖ
+	 * java1.5 æµ‹è¯•concurrent executorsç­‰å®ç°
 	 */
 	private static void testExecutor(){
 		
 	}
 	
 	/**
-	 * java1.6ÒıÈë
+	 * java1.6å¼•å…¥
 	 */
 	private static void testPhasers(){
 		
 	}
 	
 	/**
-	 * java1.7ÒıÈë
+	 * java1.7å¼•å…¥
 	 */
 	private static void testForkJoin(){
 		
